@@ -37,6 +37,12 @@ your_set = {4,5,6,7,8,9,10}
 # print(my_set.intersection(your_set)) # {4, 5}
 # print(my_set.isdisjoint(your_set)) # False, return true if nothing in common
 
-print(my_set.union(your_set)) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, union together but remove duplicates
-print(my_set | your_set) # same result
+# print(my_set.union(your_set)) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, union together but remove duplicates
+# print(my_set | your_set) # same result
 
+print(my_set.issubset(your_set)) # False
+
+my_set = {4,5}
+print(my_set.issubset(your_set)) # True
+
+print(your_set.issuperset(my_set)) # True
