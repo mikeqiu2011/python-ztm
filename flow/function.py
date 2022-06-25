@@ -54,10 +54,15 @@
 # print(is_even(50))
 
 # *agrs **kwargs
-def super_func(*args):
-    print(*args)  # 1 2 3
-    print(args) # (1, 2, 3), this gives us a tuple we can iterate on
-    return sum(args) # 6
+# def super_func(*args):
+#     print(*args)  # 1 2 3
+#     print(args) # (1, 2, 3), this gives us a tuple we can iterate on
+#     return sum(args) # 6
+#
+# print(super_func(1, 2, 3))
 
+def kw_func(**kwargs):
+    # print(**kwargs)
+    print(kwargs)  # {'num1': 5, 'num2': 10}
 
-print(super_func(1, 2, 3))
+kw_func(num1=5, num2=10)
