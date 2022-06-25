@@ -12,4 +12,15 @@ def find_dup_in_list(li):
 
     return result
 
-print(find_dup_in_list(some_list))
+def find_dup_in_list2(li):
+    result = []
+
+    for item in li:
+        if li.count(item) > 1:
+            if item not in result:
+                result.append(item)
+
+    return result
+
+
+print(find_dup_in_list2(some_list))
