@@ -48,7 +48,16 @@
 # print(sum2.__doc__)
 
 # clean code
-def is_even(num):
-    return num % 2 == 0
+# def is_even(num):
+#     return num % 2 == 0
+#
+# print(is_even(50))
 
-print(is_even(50))
+# *agrs **kwargs
+def super_func(*args):
+    print(*args)  # 1 2 3
+    print(args) # (1, 2, 3), this gives us a tuple we can iterate on
+    return sum(args) # 6
+
+
+print(super_func(1, 2, 3))
