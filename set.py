@@ -26,7 +26,15 @@
 my_set = {1,2,3,4,5}
 your_set = {4,5,6,7,8,9,10}
 
-print(my_set.difference(your_set)) # {1, 2, 3} - duplicates get ignored
-my_set.discard(5)
-print(my_set) # {1, 2, 3, 4}
+# print(my_set.difference(your_set)) # {1, 2, 3} - duplicates get ignored
+# print(my_set) # {1, 2, 3, 4, 5} - original one not updated
+# my_set.discard(5)
+# print(my_set) # {1, 2, 3, 4}
+
+# my_set.difference_update(your_set)
+# print(my_set) # {1, 2, 3} - original one get updated
+
+print(my_set.intersection(your_set)) # {4, 5}
+print(my_set.isdisjoint(your_set)) # False, return true if nothing in common
+
 
