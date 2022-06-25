@@ -27,11 +27,22 @@
 #4 - built-in python functions
 
 
-a = 1
-def confusion():
-    a = 5   # the function creates a new local variable a
-    return a
+# a = 1
+# def confusion():
+#     a = 5   # the function creates a new local variable a
+#     return a
+#
+# print(a) # 1
+# print(confusion()) # 5
+# print(a) # 1
 
-print(a) # 1
-print(confusion()) # 5
-print(a) # 1
+total = 0
+def confusion(b):
+    print(b) # function local scope
+    # total += 1 # error: local variable 'total' referenced before assignment
+    global total # bad practice
+    total += 1
+    return total
+
+confusion(300)
+print(total)
