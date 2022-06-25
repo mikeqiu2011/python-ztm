@@ -22,14 +22,16 @@ def display_pic(picture):
                 print('*', end=' ')
         print()
 
+fill = '*'
+empty = ' '
 def display_pic2(picture):
   for row in picture:
     for pixel in row:
-      if pixel == 0:
-        print(' ', end=' ')
+      if pixel:
+        print(fill, end=' ')
       else:
-        print('*', end=' ')
-    print('')
+        print(empty, end=' ')
+    print('')  # a new line after a row
 
 #       *
 #     * * *
