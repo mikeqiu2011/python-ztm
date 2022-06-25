@@ -29,6 +29,12 @@ total = sum(10,5)
 print(total)
 
 def sum2(num1, num2):
+    '''
+    calculate the sum of the given two values
+    :param num1: first numer
+    :param num2: second number
+    :return: the sum of the two values
+    '''
     def another_func(n1, n2):
         print(f'calling from sub-func: {num1}') # sub-func can access parent's parameter
         return n1 + n2
@@ -36,3 +42,7 @@ def sum2(num1, num2):
     return another_func(num1, num2)
 
 print(sum2(10,10))
+
+help(sum2)
+
+print(sum2.__doc__)
