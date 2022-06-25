@@ -47,9 +47,24 @@
 # confusion(300)
 # print(total)
 
-total = 0
-def count(total): # dependency injection
-    total += 1
-    return total
+# total = 0
+# def count(total): # dependency injection
+#     total += 1
+#     return total
+#
+# print(count(count(count(total)))) # 3, without pluting the global scope
 
-print(count(count(count(total)))) # 3, without pluting the global scope
+# nonlocal
+def outer():
+    x = 'local'
+    def inner():
+        nonlocal x # reference to parent local, bad practice
+        x = 'nonlocal'
+        print('inner:', x)
+
+    inner()
+    print('outter:', x)
+
+outer()
+# inner: nonlocal
+# outter: nonlocal
