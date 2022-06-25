@@ -67,7 +67,19 @@
 #
 # kw_func(num1=5, num2=10)
 
-def super_func(*args, **kwargs):
+# def super_func(*args, **kwargs):
+#     total = 0
+#     for item in kwargs.values():
+#         total += item
+#
+#     return sum(args) + total
+#
+#
+# print(super_func(1, 2, 3, num1=5, num2=10)) # 21
+
+# RULE of argument order:
+# params, *args, default parameters, **kwargs
+def super_func(name, *args, i='hi', **kwargs):
     total = 0
     for item in kwargs.values():
         total += item
@@ -75,8 +87,4 @@ def super_func(*args, **kwargs):
     return sum(args) + total
 
 
-print(super_func(1, 2, 3, num1=5, num2=10)) # 21
-
-# RULE of argument order:
-# params, *args, default parameters, **kwargs
-
+print(super_func('mike', 1, 2, 3, num1=5, num2=10)) # 21
