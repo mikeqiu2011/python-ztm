@@ -34,7 +34,9 @@ your_set = {4,5,6,7,8,9,10}
 # my_set.difference_update(your_set)
 # print(my_set) # {1, 2, 3} - original one get updated
 
-print(my_set.intersection(your_set)) # {4, 5}
-print(my_set.isdisjoint(your_set)) # False, return true if nothing in common
+# print(my_set.intersection(your_set)) # {4, 5}
+# print(my_set.isdisjoint(your_set)) # False, return true if nothing in common
 
+print(my_set.union(your_set)) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, union together but remove duplicates
+print(my_set | your_set) # same result
 
