@@ -22,10 +22,19 @@ def display_pic(picture):
                 print('*', end=' ')
         print()
 
+def display_pic2(picture):
+  for row in picture:
+    for pixel in row:
+      if pixel == 0:
+        print(' ', end=' ')
+      else:
+        print('*', end=' ')
+    print('')
+
 #       *
 #     * * *
 #   * * * * *
 # * * * * * * *
 #       *
 #       *
-display_pic(picture)
+display_pic2(picture)
