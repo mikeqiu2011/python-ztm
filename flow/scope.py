@@ -36,13 +36,20 @@
 # print(confusion()) # 5
 # print(a) # 1
 
+# total = 0
+# def confusion(b):
+#     print(b) # function local scope
+#     # total += 1 # error: local variable 'total' referenced before assignment
+#     global total # bad practice
+#     total += 1
+#     return total
+#
+# confusion(300)
+# print(total)
+
 total = 0
-def confusion(b):
-    print(b) # function local scope
-    # total += 1 # error: local variable 'total' referenced before assignment
-    global total # bad practice
+def count(total): # dependency injection
     total += 1
     return total
 
-confusion(300)
-print(total)
+print(count(count(count(total)))) # 3, without pluting the global scope
