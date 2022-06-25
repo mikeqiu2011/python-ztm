@@ -12,7 +12,7 @@ def find_dup_in_list(li):
 
     return result
 
-def find_dup_in_list2(li):
+def find_dup_in_list2(li):  # li is the parameter, which is variable name
     result = []
 
     for item in li:
@@ -23,4 +23,4 @@ def find_dup_in_list2(li):
     return result
 
 
-print(find_dup_in_list2(some_list))
+print(find_dup_in_list2(some_list))  # some_list is argument, which is variable value
