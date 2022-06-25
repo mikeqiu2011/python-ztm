@@ -12,3 +12,15 @@ my_list = [1,2,3,4,5,5]
 my_list = list(set(my_list))
 print(my_list) # [1, 2, 3, 4, 5]
 
+# access set item
+# print(my_set[0]) # 'set' object is not subscriptable
+
+print(1 in my_set) # True
+print(len(my_set)) # 6
+
+new_set = my_set.copy()
+my_set.clear()
+print(my_set) # set()
+print(new_set) # {1, 2, 3, 4, 5, 100}
+
+
