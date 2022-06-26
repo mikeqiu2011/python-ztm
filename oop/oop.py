@@ -1,6 +1,12 @@
-class MyObj():
-    pass
+# OOP
 
-my_obj = MyObj()
+class PlayerCharacter:
+    def __init__(self, name) -> None:  # constructor method
+        self.name = name
 
-print(type(my_obj))
+    def run(self):
+        print('run')
+
+p1 = PlayerCharacter('mike') # when run (), the __init__ is invoked
+# p1.run()
+print(p1)
