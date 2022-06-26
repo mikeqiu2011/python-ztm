@@ -11,11 +11,12 @@ class PlayerCharacter:
 
     @classmethod
     def adding_things(cls, num1, num2):
-        return num1 + num2
+        return cls('Teddy', num1 + num2)
 
 
 # class method does not require instance
-print(PlayerCharacter.adding_things(3, 4))
+player3 = PlayerCharacter.adding_things(3, 4)
+print(player3.age)
 # p1 = PlayerCharacter('tom', 10)  # when run (), the __init__ is invoked
 # # adding_things() takes 2 positional arguments but 3 were given
 # print(p1.adding_things(2, 3))
