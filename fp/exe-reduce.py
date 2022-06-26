@@ -16,6 +16,12 @@ print(zip_list_sorted)
 
 # 3 Filter the scores that pass over 50%
 scores = [73, 20, 65, 19, 76, 100, 88]
+scores_filtered = list(filter(lambda x: x > 50, scores))
+print(scores_filtered)
 
 
 # 4 Combine all of the numbers that are in a list on this file using reduce (my_numbers and scores). What is the total?
+
+li = my_numbers + scores
+result = reduce(lambda acc, num: acc+num, li)
+print(result)
