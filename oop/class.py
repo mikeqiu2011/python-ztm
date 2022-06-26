@@ -14,6 +14,8 @@ class PlayerCharacter:
         return num1 + num2
 
 
-p1 = PlayerCharacter('tom', 10)  # when run (), the __init__ is invoked
-# adding_things() takes 2 positional arguments but 3 were given
-print(p1.adding_things(2, 3))
+# class method does not require instance
+print(PlayerCharacter.adding_things(3, 4))
+# p1 = PlayerCharacter('tom', 10)  # when run (), the __init__ is invoked
+# # adding_things() takes 2 positional arguments but 3 were given
+# print(p1.adding_things(2, 3))
