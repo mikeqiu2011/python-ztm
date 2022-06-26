@@ -2,11 +2,18 @@
 
 class PlayerCharacter:
     def __init__(self, name) -> None:  # constructor method
-        self.name = name
+        self.name = name # property
 
     def run(self):
         print('run')
 
 p1 = PlayerCharacter('mike') # when run (), the __init__ is invoked
-# p1.run()
-print(p1)
+p2 = PlayerCharacter('kevin')
+
+print(p1.name)
+print(p2.name)
+
+p1.run()
+
+p2.attack = 50
+print(p2.attack)  # 50
