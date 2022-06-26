@@ -15,6 +15,7 @@ class Wizard(User):
         self._power = power
 
     def attack(self):
+        User.attack(self)
         print(f'attack with power {self._power}')
 
 
