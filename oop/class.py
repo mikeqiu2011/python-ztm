@@ -10,7 +10,7 @@ class PlayerCharacter:
         print(f'my name is {self.name}')
 
     @classmethod
-    def adding_things(num1, num2):
+    def adding_things(cls, num1, num2):
         return num1 + num2
 
 
