@@ -1,6 +1,6 @@
-# OOP
-
 class PlayerCharacter:
+    # Class Attribute
+    membership = True # static
     def __init__(self, name) -> None:  # constructor method
         self.name = name # property
 
@@ -17,3 +17,5 @@ p1.run()
 
 p2.attack = 50
 print(p2.attack)  # 50
+
+print(p1.membership) # True
