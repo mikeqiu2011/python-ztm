@@ -26,11 +26,16 @@ class Archer(User):
 
 
 wizard1 = Wizard('gandof', 10)
-wizard1.sign_in()
-wizard1.attack()
-
 archer1 = Archer('Robin', 30)
-archer1.sign_in()
-archer1.attack()
-archer1.attack()
-archer1.attack()
+
+print(isinstance(wizard1, Wizard))  # True
+print(isinstance(wizard1, User))   # True
+print(isinstance(wizard1, object))   # True
+print(isinstance(wizard1, Archer))  # False
+
+# wizard1.sign_in()
+# wizard1.attack()
+
+# archer1.sign_in()
+# archer1.attack()
+# archer1.attack()
