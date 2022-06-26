@@ -33,9 +33,11 @@ class Archer(User):
 
 
 class HybridBorg(Wizard, Archer):
-    pass
+    def __init__(self, name, power, num_arrows) -> None:
+        Wizard.__init__(self, name, power)
+        Archer.__init__(self, name, num_arrows)
 
 
-hb = HybridBorg('simon', 20)
+hb = HybridBorg('simon', 20, 100)
 hb.attack()
 # hb.check_arrows()
