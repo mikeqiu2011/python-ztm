@@ -17,4 +17,5 @@
 ## OOP 4 pillars
 1. encapsulation - bind related property and method together, and intercate with each other
 2. Abstraction - hiding complex information from world outside
-3. polymorphism
+3. inheritence
+4. polymorphism
