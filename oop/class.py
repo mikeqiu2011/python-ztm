@@ -1,25 +1,17 @@
 class PlayerCharacter:
     # Class Attribute
-    membership = True # static
-    def __init__(self, name) -> None:  # constructor method
-        if self.membership:
-            self.name = name # property
+    membership = True # static, not change for different obj
+    def __init__(self, name='anonymous', age=0) -> None:  # constructor method
+        if age > 18:
+            self.name = name # object property, dynamic for different obj
+            self.age = age
 
     def shout(self):
         print(f'my name is {self.name}')
 
-p1 = PlayerCharacter('mike') # when run (), the __init__ is invoked
-p2 = PlayerCharacter('kevin')
+p1 = PlayerCharacter('tom', 10) # when run (), the __init__ is invoked
 
-print(p1.name)
-print(p2.name)
+print(p1.name) # object has no attribute 'name'
 
-p1.shout()
 
-p2.attack = 50
-print(p2.attack)  # 50
 
-print(p1.membership) # True
-p1.membership = False
-print(p1.membership) # changed to False
-print(p2.membership) # still True
