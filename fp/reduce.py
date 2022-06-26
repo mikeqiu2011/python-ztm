@@ -3,8 +3,8 @@ from functools import reduce
 my_list = [1, 2, 3]
 
 
-def accumulator(num1, num2):
-    return num1 + num2
+def accumulator(acc, num):
+    return acc + num
 
 
 result = reduce(accumulator, my_list, 5)
