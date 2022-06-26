@@ -3,11 +3,11 @@ class PlayerCharacter:
     membership = True  # static, not change for different obj
 
     def __init__(self, name='anonymous', age=0) -> None:  # constructor method
-        self.name = name  # object property, dynamic for different obj
-        self.age = age
+        self._name = name  # object property, dynamic for different obj
+        self._age = age
 
     def shout(self):
-        print(f'my name is {self.name}')
+        print(f'my name is {self._name}')
 
     @classmethod
     def adding_things(cls, num1, num2):
