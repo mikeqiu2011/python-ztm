@@ -4,7 +4,7 @@
 while True:
     try:
         age = int(input('enter your age:\n'))
-        print(age)
+        10/age
 
     except:
         print('Pls enter a number')
