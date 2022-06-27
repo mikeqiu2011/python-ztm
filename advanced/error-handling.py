@@ -18,8 +18,8 @@
 def sum(num1, num2):
     try:
         return num1 + num2
-    except:
-        print('something is wrong')
+    except TypeError as err:
+        print('pls enter numbers', err)
 
 
 result = sum('1', 2)  # error caught, None
