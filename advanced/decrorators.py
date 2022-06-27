@@ -1,17 +1,22 @@
 # decorator pattern
+from time import time
 
-def my_decorator(func):
-    def wrap_func(*args, **kwargs):
-        print('before func call')
-        func(*args, **kwargs)
-        print('after func call')
+
+def performance(fn):
+    def wrap_func(*args, **kvargs):
+        start = time()
+        result = fn(*args, **kvargs)
+        print(f'it takes {time()-start} to run the code')
+
+        return result
 
     return wrap_func
 
 
-@my_decorator
-def hello(msg, emoji=':)'):
-    print(msg, emoji)
+@performance
+def long_job():
+    for i in range(10000000):
+        i*5
 
 
-hello('hi mike')
+long_job()
