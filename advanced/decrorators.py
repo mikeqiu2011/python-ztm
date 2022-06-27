@@ -3,5 +3,7 @@ def hello():
 
 
 greet = hello
+del hello
+# hello() not working
 
-greet()
+greet()  # still works
