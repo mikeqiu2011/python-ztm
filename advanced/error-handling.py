@@ -16,8 +16,11 @@
 
 
 def sum(num1, num2):
-    return num1 + num2
+    try:
+        return num1 + num2
+    except:
+        print('something is wrong')
 
 
-result = sum('1', '2')  # '12' !!
+result = sum('1', 2)  # error caught, None
 print(result)
