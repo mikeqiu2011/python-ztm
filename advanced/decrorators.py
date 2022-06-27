@@ -1,9 +1,9 @@
-def hello():
-    print('hellooo')
+def hello(func):
+    func()
 
 
-greet = hello
-del hello
-# hello() not working
+def greet():
+    print('hello')
 
-greet()  # still works
+
+hello(greet)
