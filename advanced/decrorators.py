@@ -1,16 +1,17 @@
-# decorator
+# decorator pattern
 
 def my_decorator(func):
-    def wrap_func(*arg):
-        print('wrapping')
-        func(*arg)
+    def wrap_func(*args, **kwargs):
+        print('before func call')
+        func(*args, **kwargs)
+        print('after func call')
 
     return wrap_func
 
 
 @my_decorator
-def hello(msg1, msg2):
-    print(msg1, msg2)
+def hello(msg, emoji=':)'):
+    print(msg, emoji)
 
 
-hello('hi mike', 'how are you')
+hello('hi mike')
