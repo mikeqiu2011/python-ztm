@@ -1,7 +1,6 @@
 class MyRange:
     def __init__(self, first, last) -> None:
-        self.current = 0
-        self.first = first
+        self.current = first
         self.last = last
 
     def __iter__(self):
