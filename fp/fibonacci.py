@@ -28,11 +28,8 @@ def fib(num):
     x = 0
     y = 1
     for i in range(num):
-        result = x + y
-        x = y
-        y = result
-
-        yield result
+        yield x
+        x, y = y, x+y
 
 
 for i in fib(20):
