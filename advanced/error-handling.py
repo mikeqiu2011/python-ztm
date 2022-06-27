@@ -8,15 +8,17 @@ while True:
 
     except ValueError:
         print('Pls enter a number')
-        print(age)
+        continue
     except ZeroDivisionError:
         print('zero is not allowed')
+        break
     else:
         print('thank you')
         break
     finally:
-        print(f'user entered {age}! activity logged!')
+        print(f'user entered! activity logged!')  # age might not be accessible
 
+    print('can you hear me')  # code is not reachable
 
 # def sum(num1, num2):
 #     try:
