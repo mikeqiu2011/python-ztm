@@ -1,9 +1,16 @@
-def hello(func):
-    func()
+# decorator
+
+def my_decorator(func):
+    def wrap_func():
+        print('wrapping')
+        func()
+
+    return wrap_func
 
 
-def greet():
+@my_decorator
+def hello():
     print('hello')
 
 
-hello(greet)
+hello()
