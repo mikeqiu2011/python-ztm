@@ -1,14 +1,31 @@
-# range() is a generator, which gives you one by one
-# if you need a huge list, the list must be first created in memory as a whole before you can use it, which is not efficient
+# generator real demo
+# it is especially useful for large ammound of data
+from time import time
 
-def generator_function(num):
+
+def performance(fn):
+    def wrap_func(*args, **kvargs):
+        start = time()
+        result = fn(*args, **kvargs)
+        print(f'it takes {time()-start} to run the code')
+
+        return result
+
+    return wrap_func
+
+
+@performance
+def long_job(num):
     for i in range(num):
-        yield i * 2  # the yield pause the function
+        i*5
 
 
-g = generator_function(3)
-print(g)  # generator object
-print(next(g))  # 2
-print(next(g))  # 4
-print(next(g))  # 6
-print(next(g))  # 8
+@performance
+def long_job2(num):
+    for i in list(range(num)):
+        i*5
+
+
+num = 100000000
+long_job(num)  # 9 seconds
+long_job2(num)  # 40 seconds!!
