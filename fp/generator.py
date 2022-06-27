@@ -3,8 +3,12 @@
 
 def generator_function(num):
     for i in range(num):
-        yield i  # instead returning, generator yield
+        yield i * 2  # the yield pause the function
 
 
-for item in generator_function(1000):
-    print(item)
+g = generator_function(3)
+print(g)  # generator object
+print(next(g))  # 2
+print(next(g))  # 4
+print(next(g))  # 6
+print(next(g))  # 8
