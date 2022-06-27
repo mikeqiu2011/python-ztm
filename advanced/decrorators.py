@@ -8,9 +8,13 @@ def my_decorator(func):
     return wrap_func
 
 
-@my_decorator
+# @my_decorator
 def hello():
     print('hello')
 
 
-hello()
+# hello()
+
+# underneth the hood:
+a = my_decorator(hello)
+a()
