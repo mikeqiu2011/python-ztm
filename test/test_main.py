@@ -3,6 +3,9 @@ from main import do_stuff
 
 
 class TestDoStuff(unittest.TestCase):
+    def setUp(self) -> None:
+        print('about to test a function')
+
     def test_normal(self):
         test_param = 10
         result = do_stuff(test_param)
