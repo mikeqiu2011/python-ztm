@@ -28,6 +28,10 @@
 3. inheritence
 4. polymorphism
 
+## Unit testing
+
+    python -m unittest
+
 ## useful resources
 
     https://regex101.com/
