@@ -34,3 +34,5 @@ d4['b'] = 2
 d4['a'] = 1
 
 print(d4 == d3)  # False
+
+num + 4
