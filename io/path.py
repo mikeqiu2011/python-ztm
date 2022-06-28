@@ -1,3 +1,8 @@
-# below works fine on unix system, but not working on windows
-with open('app/sad.txt') as f:
-    print(f.readlines())
+try:
+    with open('app/sad1.txt') as f:
+        print(f.readlines())
+except FileNotFoundError as err:
+    print(err)
+except IOError as err:
+    print(err)
+    raise err
