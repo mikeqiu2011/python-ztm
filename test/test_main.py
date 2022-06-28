@@ -33,5 +33,8 @@ class TestDoStuff(unittest.TestCase):
         result = do_stuff()
         self.assertEqual(result, 5)
 
+    def tearDown(self) -> None:
+        print('clear things up')
+
 # if __name__ == '__main__':
 #     unittest.main()
