@@ -11,3 +11,8 @@ from time import time
 start = time()
 end = time()
 print(f'program lapse {end - start} seconds')
+
+from array import array
+
+arr = array('i', [1, 2, 3])  # 'i' stands for signed-int takes only 2 bytes
+print(arr)  # more performant than dynamic list
