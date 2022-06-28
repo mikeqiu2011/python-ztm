@@ -1,12 +1,15 @@
 from translate import Translator
-import pdb
 
-translator = Translator(to_lang='zh')
+translator = Translator(to_lang='ja')
 
-with open('eng.txt') as file_in:
-    with open('cn.txt', mode='w') as file_out:
-        for line in file_in:
-            text = translator.translate(line)
-            file_out.write(text + '\n')
+try:
+    with open('eng.txt', mode='r') as file_in:
+        text = file_in.read()
+        translation = translator.translate(text)
+
+        with open('ja.txt', mode='w') as file_out:
+            file_out.write(translation)
+except FileNotFoundError as err:
+    print('check whether your file exists')
 
 print('Done!')
