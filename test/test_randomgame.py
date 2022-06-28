@@ -15,3 +15,8 @@ class TestCheckAnswer(unittest.TestCase):
         answer = 7
         result = check_answer(answer, self.target)
         self.assertFalse(result)
+
+    def test_num_out_of_range(self):
+        answer = 20
+        result = check_answer(answer, self.target)
+        self.assertFalse(result)

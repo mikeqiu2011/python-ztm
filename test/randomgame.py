@@ -6,15 +6,19 @@ max = 10
 
 
 def check_answer(answer, target):
-    if answer == target:
-        print('correct!')
-        return True
-    elif answer > target:
-        print('too big!')
-    else:
-        print('too small')
+    if 1 < answer < 10:
+        if answer == target:
+            print('correct!')
+            return True
+        elif answer > target:
+            print('too big!')
+        else:
+            print('too small')
 
-    return False
+        return False
+    else:
+        print('number exceed range')
+        return False
 
 
 def guess_a_num(min, max):
