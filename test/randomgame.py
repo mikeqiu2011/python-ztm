@@ -1,8 +1,8 @@
 import sys
 import random
 
-min = int(sys.argv[1])
-max = int(sys.argv[2])
+min = 1
+max = 10
 
 
 def check_answer(answer, target):
