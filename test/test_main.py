@@ -14,6 +14,9 @@ class TestDoStuff(unittest.TestCase):
         self.assertIsInstance(result, ValueError)
 
     def test_none(self):
+        '''
+        To test input of None
+        '''
         test_param = None
         result = do_stuff(test_param)
         self.assertEqual(result, 5)
