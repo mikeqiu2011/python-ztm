@@ -14,6 +14,8 @@ def check_answer(answer, target):
     else:
         print('too small')
 
+    return False
+
 
 def guess_a_num(min, max):
     target = random.randint(min, max)

@@ -10,3 +10,8 @@ class TestCheckAnswer(unittest.TestCase):
         answer = 5
         result = check_answer(answer, self.target)
         self.assertTrue(result)
+
+    def test_wrong_answer(self):
+        answer = 7
+        result = check_answer(answer, self.target)
+        self.assertFalse(result)
