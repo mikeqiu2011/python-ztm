@@ -27,3 +27,8 @@
 2. Abstraction - hiding complex information from world outside
 3. inheritence
 4. polymorphism
+
+## useful resources
+
+    https://regex101.com/
+    https://regexone.com/
