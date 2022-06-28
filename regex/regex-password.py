@@ -2,9 +2,9 @@
 # contain any sort letters, numbers, $%#@
 import re
 
-pattern = re.compile(r'(^[a-zA-Z\d$%#@]{8,}$)')
+pattern = re.compile(r'(^[a-zA-Z\d$%#@]{7,}\d$)')
 
-test = 'as$a12s'
+test = 'asasaas$a12s1'
 
 result = pattern.fullmatch(test)
 
