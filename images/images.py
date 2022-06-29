@@ -6,5 +6,8 @@ print(img.format)  # JPEG
 print(img.size)  # (640,640)
 print(img.mode)  # RGB
 
-filtered_img = img.filter(ImageFilter.BLUR)
-filtered_img.save('blur.png')
+filtered_img = img.filter(ImageFilter.SMOOTH)
+filtered_img.save('smooth.png')
+
+conv_img = img.convert('L')
+conv_img.save('grey.png')
