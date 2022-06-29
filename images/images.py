@@ -12,4 +12,7 @@ filtered_img.save('smooth.png')
 conv_img = img.convert('L')
 # conv_img.save('grey.png')
 rotated_img = conv_img.rotate(90)
-rotated_img.show()
+# rotated_img.show()
+
+resized = conv_img.resize((300, 300))
+resized.show()
