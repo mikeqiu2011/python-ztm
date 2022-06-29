@@ -17,6 +17,9 @@ rotated_img = conv_img.rotate(90)
 resized = conv_img.resize((300, 300))
 # resized.show()
 
-box = (100, 100, 400, 400)
-regin = img.crop(box)
-regin.show()
+# box = (100, 100, 400, 400)
+# regin = img.crop(box)
+# regin.show()
+
+img.thumbnail((100, 200))
+img.show()
