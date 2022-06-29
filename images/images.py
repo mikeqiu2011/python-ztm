@@ -10,4 +10,6 @@ filtered_img = img.filter(ImageFilter.SMOOTH)
 filtered_img.save('smooth.png')
 
 conv_img = img.convert('L')
-conv_img.save('grey.png')
+# conv_img.save('grey.png')
+rotated_img = conv_img.rotate(90)
+rotated_img.show()
