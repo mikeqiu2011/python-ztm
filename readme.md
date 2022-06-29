@@ -21,6 +21,8 @@
     popular in community, and good in documentation and support
     everytime you add dependency, your code base is increasing, get heavier and heavier
 
+### 7 - pic the right library
+
 ## OOP 4 pillars
 
 1. encapsulation - bind related property and method together, and intercate with each other
