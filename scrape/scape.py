@@ -7,7 +7,7 @@ def get_links_subtexts(home_url, pages):
     links = []
     subtexts = []
     for i in range(pages):
-        res = requests.get(home_url)
+        res = requests.get(f'{home_url}{i}')
         soup = BeautifulSoup(res.text, 'html.parser')
 
         links.append(soup.select('.titlelink'))
@@ -43,8 +43,8 @@ def create_custom_hackernews(links, subtexts):
 
 
 if __name__ == '__main__':
-    url = 'https://news.ycombinator.com/news'
-    links, subtexts = get_links_subtexts(url, 2)
+    url = 'https://news.ycombinator.com/news?p='
+    links, subtexts = get_links_subtexts(url, 3)
 
     hacker_news = create_custom_hackernews(links, subtexts)
 
