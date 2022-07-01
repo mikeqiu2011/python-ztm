@@ -11,3 +11,8 @@ app = Flask(__name__)
 @app.route("/")
 def hello_world():
     return "<p>Hello, mike!</p>"
+
+
+@app.route("/blog")
+def blog():
+    return "these are my thoughts"
