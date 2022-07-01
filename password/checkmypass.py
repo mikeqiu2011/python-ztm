@@ -20,14 +20,17 @@ def pwned_api_check(password):
     print(first5_char, tail)
 
     resp = request_api_data(first5_char)
-    return resp
+    return get_password_leaks_count(resp, tail)
 
 
-def read_res(response):
-    print(response.text)
+def get_password_leaks_count(hashes, hash_to_check):
+    hashes = (line.split(':') for line in hashes.text.splitlines())
+    # print(hashes)
+    for hash, count in hashes:
+        print(hash, count)
 
 
 query_char = '12345'
 resp = pwned_api_check(query_char)
-read_res(resp)
+get_password_leaks_count(resp, '12345')
 # request_api_data(query_char)
