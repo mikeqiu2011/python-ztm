@@ -10,13 +10,10 @@ def get_links_subtexts(home_url, pages):
         res = requests.get(f'{home_url}{i}')
         soup = BeautifulSoup(res.text, 'html.parser')
 
-        links.append(soup.select('.titlelink'))
-        subtexts.append(soup.select('.subtext'))
+        links += soup.select('.titlelink')
+        subtexts += soup.select('.subtext')
 
-    flat_links = sum(links, [])
-    flat_subtexts = sum(subtexts, [])
-
-    return flat_links, flat_subtexts
+    return links, subtexts
 
 
 def sort_stories_by_votes(hn_list):
