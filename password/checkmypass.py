@@ -36,7 +36,14 @@ def get_password_leaks_count(hashes, hash_to_check):
     return 0
 
 
+def checkpasswords(passwords):
+    for password in passwords:
+        count = pwned_api_check(password)
+        if count:
+            print(f'{count} times leaked for password: "{password}"')
+        else:
+            print(f'{password} was NOT found leaked, good to go!')
+
+
 if __name__ == '__main__':
-    query_char = sys.argv[1]
-    count = pwned_api_check(query_char)
-    print(f'{count} times! the password you entered has been leaked')
+    checkpasswords(sys.argv[1:])
