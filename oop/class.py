@@ -1,6 +1,6 @@
 class PlayerCharacter:
     # Class Attribute
-    membership = True  # static, not change for different obj
+    membership = True  # templates, not change for different obj
 
     def __init__(self, name='anonymous', age=0) -> None:  # constructor method
         self._name = name  # object property, dynamic for different obj
@@ -13,7 +13,7 @@ class PlayerCharacter:
     def adding_things(cls, num1, num2):
         return cls('Teddy', num1 + num2)
 
-    @staticmethod  # you do not have access to cls in static method
+    @staticmethod  # you do not have access to cls in templates method
     def adding_things2(num1, num2):
         return num1 + num2
 
