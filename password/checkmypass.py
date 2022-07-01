@@ -26,7 +26,7 @@ def pwned_api_check(password):
 
 
 def get_password_leaks_count(hashes, hash_to_check):
-    hashes = (line.split(':') for line in hashes.text.splitlines())
+    hashes = (line.split(':') for line in hashes.text.splitlines())  # generator
     # print(hashes)
     for hash, count in hashes:
         # print(hash)
@@ -44,6 +44,8 @@ def checkpasswords(passwords):
         else:
             print(f'{password} was NOT found leaked, good to go!')
 
+    return 'done'
+
 
 if __name__ == '__main__':
-    checkpasswords(sys.argv[1:])
+    sys.exit(checkpasswords(sys.argv[1:]))
