@@ -16,11 +16,18 @@ def request_api_data(query_char):
 
 def pwned_api_check(password):
     sha1password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
-    print(sha1password)
-    
-    return sha1password
+    first5_char, tail = sha1password[:5], sha1password[5:]
+    print(first5_char, tail)
+
+    resp = request_api_data(first5_char)
+    return resp
+
+
+def read_res(response):
+    print(response.text)
 
 
 query_char = '12345'
-pwned_api_check(query_char)
+resp = pwned_api_check(query_char)
+read_res(resp)
 # request_api_data(query_char)
