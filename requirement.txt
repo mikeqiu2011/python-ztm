@@ -2,3 +2,4 @@ translate
 PyPDF2
 beautifulsoup4
 requests
+Flask
