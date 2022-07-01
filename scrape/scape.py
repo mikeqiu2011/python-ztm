@@ -2,15 +2,21 @@ import requests
 from bs4 import BeautifulSoup
 import pprint
 
-url = 'https://news.ycombinator.com/news'
-res = requests.get(url)
 
-soup = BeautifulSoup(res.text, 'html.parser')
-# print(soup.body.contents)
+def get_links_subtexts(home_url, pages):
+    links = []
+    subtexts = []
+    for i in range(pages):
+        res = requests.get(home_url)
+        soup = BeautifulSoup(res.text, 'html.parser')
 
-links = soup.select('.titlelink')
-# votes = soup.select('.score') # some links have no score, but all have subtext
-subtexts = soup.select('.subtext')
+        links.append(soup.select('.titlelink'))
+        subtexts.append(soup.select('.subtext'))
+
+    flat_links = sum(links, [])
+    flat_subtexts = sum(subtexts, [])
+
+    return flat_links, flat_subtexts
 
 
 def sort_stories_by_votes(hn_list):
@@ -36,6 +42,10 @@ def create_custom_hackernews(links, subtexts):
     return sort_stories_by_votes(hn)
 
 
-hacker_news = create_custom_hackernews(links, subtexts)
+if __name__ == '__main__':
+    url = 'https://news.ycombinator.com/news'
+    links, subtexts = get_links_subtexts(url, 2)
 
-pprint.pprint(hacker_news)
+    hacker_news = create_custom_hackernews(links, subtexts)
+
+    pprint.pprint(hacker_news)
