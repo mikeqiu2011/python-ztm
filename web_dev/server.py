@@ -18,6 +18,6 @@ def html_page(page_name=None):
     return render_template(page_name)
 
 
-@app.route('/submit_form', methods=['POST', 'GET'])
+@app.post('/submit_form')
 def login():
     return 'form submitted'
