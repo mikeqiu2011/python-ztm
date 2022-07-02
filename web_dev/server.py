@@ -9,8 +9,13 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_wmy_home():
+def hello_my_home():
     return render_template('index.html')
+
+
+@app.route('/works')
+def work():
+    return render_template('works.html')
 
 
 @app.route("/about")
@@ -18,11 +23,11 @@ def about():
     return render_template('about.html')
 
 
-@app.route("/blog")
-def blog():
-    return "these are my thoughts"
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
 
 
-@app.route("/blog/2020/dogs")
-def blog2():
-    return "these is my dog"
+@app.route("/components")
+def components():
+    return render_template('components.html')
