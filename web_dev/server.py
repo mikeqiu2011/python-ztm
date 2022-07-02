@@ -8,10 +8,10 @@ app = Flask(__name__)
 # flask run
 
 
-@app.route("/<username>")
-def hello_world(username=None):
+@app.route("/<username>/<int:post_id>")
+def hello_world(username=None, post_id=None):
     print(url_for('static', filename='favicon.ico'))  # /static/favicon.ico
-    return render_template('index.html', name=username)
+    return render_template('index.html', name=username, post_id=post_id)
 
 
 @app.route("/about")
