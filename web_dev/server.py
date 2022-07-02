@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -13,6 +13,11 @@ def hello_my_home():
     return render_template('index.html')
 
 
-@app.route('/<string: page_name>')
+@app.route('/<string:page_name>')
 def html_page(page_name=None):
     return render_template(page_name)
+
+
+@app.route('/submit_form', methods=['POST', 'GET'])
+def login():
+    return 'form submitted'
