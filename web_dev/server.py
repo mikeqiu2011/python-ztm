@@ -13,21 +13,21 @@ def hello_my_home():
     return render_template('index.html')
 
 
-@app.route('/works')
+@app.route('/works.html')
 def work():
     return render_template('works.html')
 
 
-@app.route("/about")
+@app.route("/about.html")
 def about():
     return render_template('about.html')
 
 
-@app.route("/contact")
+@app.route("/contact.html")
 def contact():
     return render_template('contact.html')
 
 
-@app.route("/components")
+@app.route("/components.html")
 def components():
     return render_template('components.html')
